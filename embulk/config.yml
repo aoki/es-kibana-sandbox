@@ -1,0 +1,26 @@
+in:
+  type: file
+  path_prefix: logs
+  parser:
+    type: ltsv
+    charset: UTF-8
+    newline: LF
+    schema:
+    - {name: time, type: timestamp}
+    - {name: method, type: string}
+    - {name: uri, type: string}
+    - {name: protocol, type: string}
+    - {name: status, type: long}
+    - {name: host, type: string}
+    - {name: size, type: long}
+    - {name: reqtime, type: double}
+    - {name: referer, type: string}
+    - {name: ua, type: string}
+    - {name: language, type: string}
+exec: {}
+out:
+  type: elasticsearch
+  nodes:
+  - {host: localhost, port: 9200}
+  index: access_log
+  index_type: main

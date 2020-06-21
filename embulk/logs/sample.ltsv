@@ -1,0 +1,1 @@
+time:2020-06-18T04:00:01+09:00	method:GET	uri:/foo/bar/xxx	protocol:HTTP/1.1	status:200	host:127.0.0.1	size:2281	reqtime:0.032	referer:-	ua:foo	language:ja-jp

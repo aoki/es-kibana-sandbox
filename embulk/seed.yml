@@ -1,0 +1,13 @@
+in:
+  type: file
+  path_prefix: logs
+  parser:
+    type: ltsv
+exec: {}
+out:
+  # type: stdout
+  type: elasticsearch
+  nodes:
+    - { host: localhost, port: 9200 }
+  index: access_log
+  index_type: main
